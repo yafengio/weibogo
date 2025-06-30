@@ -9,7 +9,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/maratrixx/weibogo"
+	"github.com/yafengio/weibogo"
 )
 
 var (

@@ -5,7 +5,7 @@ import (
 	"sort"
 	"time"
 
-	"github.com/maratrixx/weibogo"
+	"github.com/yafengio/weibogo"
 )
 
 const (
@@ -16,12 +16,13 @@ const (
 // 并行抓取指定用户的微博
 //
 // 输入参数：
-//	weibo		weibogo.Weibo结构体指针
-//	access_token	用户的访问令牌
-// 	userName	微博用户名
-//	userId		微博用户ID，注意仅当userName为空字符串时使用此值
-//	numStatuses	需要抓取的总微博数，注意由于新浪的限制，最多只能抓取最近2000条微博，当此参数大于2000时取2000
-//      timeout		超时退出，单位为毫秒，当值为0时不设超时
+//
+//		weibo		weibogo.Weibo结构体指针
+//		access_token	用户的访问令牌
+//		userName	微博用户名
+//		userId		微博用户ID，注意仅当userName为空字符串时使用此值
+//		numStatuses	需要抓取的总微博数，注意由于新浪的限制，最多只能抓取最近2000条微博，当此参数大于2000时取2000
+//	     timeout		超时退出，单位为毫秒，当值为0时不设超时
 //
 // 返回按照ID逆序排序的微博
 func GetStatuses(weibo *weibogo.Weibo, access_token string, userName string, userId int64, numStatuses int, timeout int) ([]*weibogo.Status, error) {
@@ -139,9 +140,11 @@ type StatusSlice []*weibogo.Status
 func (ss StatusSlice) Len() int {
 	return len(ss)
 }
+
 func (ss StatusSlice) Swap(i, j int) {
 	ss[i], ss[j] = ss[j], ss[i]
 }
+
 func (ss StatusSlice) Less(i, j int) bool {
 	return ss[i].Id > ss[j].Id
 }

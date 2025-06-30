@@ -1,3 +1,3 @@
-module github.com/maratrixx/weibogo
+module github.com/yafengio/weibogo
 
 go 1.12

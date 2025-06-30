@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/maratrixx/weibogo"
-	"github.com/maratrixx/weibogo/contrib"
+	"github.com/yafengio/weibogo"
+	"github.com/yafengio/weibogo/contrib"
 )
 
 var (

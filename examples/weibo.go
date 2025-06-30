@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/maratrixx/weibogo"
+	"github.com/yafengio/weibogo"
 )
 
 var (
@@ -91,6 +91,6 @@ func main() {
 	showUser()
 	getFriendsStatuses()
 	getUserStatus()
-	//updateStatus()
-	//uploadStatus()
+	// updateStatus()
+	// uploadStatus()
 }
